@@ -1,0 +1,112 @@
+{
+	"field": [{
+			"club": "AJ Katzenmaier",
+			"address": "24 W. Walton St., Chicago, IL 60610",
+			"googleUrl": "https://www.google.de/maps/place/24+W+Walton+St,+Chicago,+IL+60610,+USA/@41.9002931,-87.6312384,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd34e07f6bac3:0x68a82e5d59952c86!8m2!3d41.9002931!4d-87.6290497?hl=en"
+		},
+
+		{
+			"club": "Greenbay",
+			"address": "24 W. Walton St., Chicago, IL 60610",
+			"googleUrl": "https://www.google.de/maps/place/1734+N+Orleans+St,+Chicago,+IL+60614,+USA/@41.9138035,-87.6400287,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd34073f306a3:0x9e1726bbf8f23f0e!8m2!3d41.9138035!4d-87.63784?hl=en"
+		},
+		{
+			"club": "Howard A Yeager",
+			"address": "24 W. Walton St., Chicago, IL 60610",
+			"googleUrl": "https://www.google.de/maps/place/2245+N+Southport+Ave,+Chicago,+IL+60614,+USA/@41.9232646,-87.6651146,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd2e37f9b8d2d:0x62ad8b907dd755d6!8m2!3d41.9232646!4d-87.6629259?hl=en"
+		},
+
+		{
+			"club": "North",
+			"address": "24 W. Walton St., Chicago, IL 60610",
+			"googleUrl": "https://www.google.de/maps/place/24+W+Walton+St,+Chicago,+IL+60610,+USA/@41.9002931,-87.6312384,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd34e07f6bac3:0x68a82e5d59952c86!8m2!3d41.9002931!4d-87.6290497?hl=en"
+		},
+		{
+			"club": "South",
+			"address": "24 W. Walton St., Chicago, IL 60610",
+			"googleUrl": "https://www.google.de/maps/place/2101+N+Fremont+St,+Chicago,+IL+60614,+USA/@41.9197753,-87.6535579,17z/data=!3m1!4b1!4m5!3m4!1s0x880fd3196fb41dc7:0x970be7f7d6336df5!8m2!3d41.9197753!4d-87.6513692?hl=en"
+		}
+	],
+
+	"teams": [
+
+		{
+			"teamname": "bad kompany",
+			"logo": "images/621442.png"
+
+		},
+		{
+			"teamname": "die hard",
+			"logo": "images/coloured-knight-design_1152-54.png"
+		},
+		{
+			"teamname": "poortugal",
+			"logo": "images/football-as-football-02.png"
+		},
+		{
+			"teamname": "motherwell",
+			"logo": "images/Spain%20National%20Football%20&%20%20&%20Spain%20National%20Team%20Logo.png"
+		},
+		{
+			"teamname": "ACDC United",
+			"logo": "images/tiger.png"
+		},
+		{
+			"teamname": "Class on Grass",
+			"logo": "images/dog.png"
+		},
+		{
+			"teamname": "Ball of Duty",
+			"logo": "images/snake.png"
+		}
+	],
+	"match": [
+		{
+			"game": "Team 7 vs Team 5",
+			"t1name": "Ball of Duty",
+			"t1logo": "images/snake.png",
+			"t2name": "ACDC United",
+			"t2logo": "images/tiger.png",
+			"date": "12/11",
+			"field": "AJ Katzenmaier"
+		},
+		{
+			"game": "Team 4 vs Team 5",
+			"t1name": "motherwell",
+			"t1logo": "images/Spain%20National%20Football%20&%20%20&%20Spain%20National%20Team%20Logo.png",
+			"t2name": "ACDC United",
+			"t2logo": "images/tiger.png",
+			"date": "12/11",
+			"field": "AJ Katzenmaier"
+		},
+		{
+			"game": "Team 1 vs Team2",
+			"t1name": "bad kompany",
+			"t1logo": "images/621442.png",
+			"t2name": "die hard",
+			"t2logo": "images/coloured-knight-design_1152-54.png",
+			"date": "12/11",
+			"field": "AJ Katzenmaier"
+		},
+		 {
+			"game": "Team 3 vs Team 4",
+			"t1name": "poortugal",
+			"t1logo": "images/football-as-football-02.png",
+			"t2name": "motherwell",
+			"t2logo": "images/Spain%20National%20Football%20&%20%20&%20Spain%20National%20Team%20Logo.png",
+			"date": "12/11",
+			"field": "AJ Katzenmaier"
+		},
+		 {
+			"game": "Team 1 vs Team2",
+			"t1name": "bad kompany",
+			"t1logo": "images/621442.png",
+			"t2name": "ACDC United",
+			"t2logo": "images/tiger.png",
+			"date": "12/11",
+			"field": "AJ Katzenmaier"
+		}
+
+	]
+
+}

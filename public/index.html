@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width" initial-scale="1.0" user-scalable="no">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!--Disable Viewport zooming on mobile-->
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <title>Welcome to NYSL</title>
+    <!--Logo Image-->
+    <link rel="shortcut icon" sizes="196x196" href="images/footballl.png">
+    <link rel="apple-touch-icon" href="images/59de2b3f92406c35008b5c2e-750-563.jpg">
+
+    <link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-iphone.png" />
+    <link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-ipad.png" />
+    <!--startup Image-->
+    <link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-ipad-retina-display.png" />
+    <link rel="apple-touch-startup-image" href="images/59de2b3f92406c35008b5c2e-750-563.jpg">
+    <!--CSS File-->
+    <link rel="stylesheet" href="styles/style.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+    <!-- jQuery library -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+    <!-- Latest compiled JavaScript -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+</head>
+
+<body id="matchpage">
+
+    <div class="app">
+ 
+        <h1 class="title">NorthSide Youth Soccer league</h1>
+        <p>Version 179</p>
+        <div>
+            <nav>
+                <a id="active" onclick="divVisibility('Div1');">Home</a> |
+                <a onclick="divVisibility('Div2');">Game Info</a> |
+                <a onclick="divVisibility('Div3');">Location</a> |
+                <a onclick="divVisibility('Div4');">Chat</a>
+
+            </nav>
+        </div>
+        
+<!--        HOME PAGE-->
+
+        <div id="Div1">
+            <p id="border"></p>
+            <div id="homepagelogo">
+                <div class="vs">
+                    <img alt="" width="60" height="60" src="images/621442.png">
+                    <h2>V/S</h2>
+                    <img alt="" width="60" height="60" src="images/coloured-knight-design_1152-54.png">
+                </div>
+                <div class="vs">
+                    <img alt="" width="60" height="50" src="images/football-as-football-02.png">
+                    <h2>V/S</h2>
+                    <img alt="" width="80" height="60" src="images/Spain%20National%20Football%20&%20%20&%20Spain%20National%20Team%20Logo.png">
+                </div>
+                <div class="vs">
+                    <img alt="" width="60" height="50" src="images/coloured-knight-design_1152-54.png">
+                    <h2>V/S</h2>
+                    <img alt="" width="80" height="60" src="images/angels.png">
+                </div>
+                <div class="vs">
+                    <img alt="" width="60" height="50" src="images/football-as-football-02.png">
+                    <h2>V/S</h2>
+                    <img alt="" width="80" height="60" src="images/snake.png">
+                </div>
+            </div>
+
+        </div>
+
+        <div id="Div2" style="display: none;">
+
+            <div v-for="matche in matches" class="color space">
+                <h1 id="teamsvs">{{matche.game}}</h1>
+                <img class="matchLogo" :src="matche.t1logo" alt="">
+                <p class="matchLogo">{{matche.t1name}}</p>
+                <img class="matchLogo" :src="matche.t2logo" alt="">
+                <p class="matchLogo">{{matche.t2name}}</p>
+                <p class="matchLogo">{{matche.date}}</p>
+                <p class="matchLogo">{{matche.field}}</p>
+            </div>
+        </div>
+
+        <div id="Div3" style="display: none;">
+
+<!--           GAME LOCATION PAGE-->
+           
+            <div v-for="apple in locations">
+                <h2>{{apple.club}}</h2>
+                <p>{{apple.address}}</p>
+                <div class="popup" onclick="popupfunction()"><img alt="" width="60" height="60" src="images/map.png">
+                    <a :href="apple.googleUrl" target=”_blank” id="myPopup" class="popuptext">
+                        <iframe :src="apple.googleUrl" frameborder="0" width="300px" height="370px"></iframe>
+                    </a>
+                </div>
+            </div>
+        </div>
+        
+<!--        SIGN IN PAGE-->
+     
+        <div id="Div4" style="display: none;">
+            <div>
+                <div>
+                    <div class="login">
+
+                        <input type="button" class="new-aqua" type="submit" onclick="checkUserSignIn()" value="Google Sign In">
+
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+        
+<!--        CHAT PAGE-->
+       
+        <div id="Div5" class="container" style="display: none;">
+            <div id="messageArea" class="box col-sm-8">
+                loading post...
+            </div>
+            <div id="textArea">
+                <input id="textMessage" class="input" type="text" placeholder="Your message...">
+                <button id="create-post" class="button is-primary">Send</button>
+            </div>
+
+        </div>
+    </div>
+
+
+
+    <script src="https://www.gstatic.com/firebasejs/5.3.0/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyAPfFgvWUNs8ZOhtgR5B1YCWKwkCA3Cy-E",
+            authDomain: "nysl-45b71.firebaseapp.com",
+            databaseURL: "https://nysl-45b71.firebaseio.com",
+            projectId: "nysl-45b71",
+            storageBucket: "",
+            messagingSenderId: "1041926991644"
+        };
+        firebase.initializeApp(config);
+
+    </script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.js"></script>
+    <script src="script/app.js"></script>
+</body>
+
+</html>
