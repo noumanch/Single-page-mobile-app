@@ -32,22 +32,24 @@
 </head>
 
 <body id="matchpage">
+    <div>
+        <nav>
+            <a id="active" onclick="divVisibility('Div1');"><img alt="" width="39" height="39" src="./images/baseline-home-black-18/2x/baseline_home_black_18dp.png"></a>|
+            <a onclick="divVisibility('Div2');"><img alt="" width="40" height="40" src="./images/baseline-info-black-18/2x/baseline_info_black_18dp.png"></a>|
+            <a onclick="divVisibility('Div3');"><img alt="" width="33" height="33" src="./images/baseline-location_on-black-18/2x/baseline_location_on_black_18dp.png"></a>|
+            <a onclick="divVisibility('Div4');"><img alt="" width="36" height="36" src="./images/baseline-chat-black-18/2x/baseline_chat_black_18dp.png"></a>
+
+        </nav>
+    </div>
 
     <div class="app">
- 
-        <h1 class="title">NorthSide Youth Soccer league</h1>
-        <p>Version 179</p>
-        <div>
-            <nav>
-                <a id="active" onclick="divVisibility('Div1');">Home</a> |
-                <a onclick="divVisibility('Div2');">Game Info</a> |
-                <a onclick="divVisibility('Div3');">Location</a> |
-                <a onclick="divVisibility('Div4');">Chat</a>
-
-            </nav>
+       <div >
+        <img id="logo" alt="" width="120" height="120" src="./images/nysl_logo.png">
         </div>
-        
-<!--        HOME PAGE-->
+        <h1 class="title">NorthSide Youth Soccer league</h1>
+
+
+        <!--        HOME PAGE-->
 
         <div id="Div1">
             <p id="border"></p>
@@ -73,6 +75,9 @@
                     <img alt="" width="80" height="60" src="images/snake.png">
                 </div>
             </div>
+            <div>
+                <iframe width="320" height="315" src="https://www.youtube.com/watch?v=dgXEifIqNps" frameborder="1"></iframe>
+            </div>
 
         </div>
 
@@ -91,8 +96,8 @@
 
         <div id="Div3" style="display: none;">
 
-<!--           GAME LOCATION PAGE-->
-           
+            <!--           GAME LOCATION PAGE-->
+
             <div v-for="apple in locations">
                 <h2>{{apple.club}}</h2>
                 <p>{{apple.address}}</p>
@@ -103,9 +108,9 @@
                 </div>
             </div>
         </div>
-        
-<!--        SIGN IN PAGE-->
-     
+
+        <!--        SIGN IN PAGE-->
+
         <div id="Div4" style="display: none;">
             <div>
                 <div>
@@ -119,9 +124,9 @@
 
             </div>
         </div>
-        
-<!--        CHAT PAGE-->
-       
+
+        <!--        CHAT PAGE-->
+
         <div id="Div5" class="container" style="display: none;">
             <div id="messageArea" class="box col-sm-8">
                 loading post...
